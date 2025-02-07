@@ -1,0 +1,21 @@
+ข้อสังเกตและคําแนะนํา:
+
+1. รูปแบบการเขียน Comment ไม่ถูกต้อง
+```javascript
+// ถูกต้อง
+model: "anthropic/claude-3.5-sonnet" // ผิด - ใช้ comma แล้วตามด้วย comment
+```
+
+2. ควรเลือกใช้เพียง Model เดียว แทนที่จะคอมเมนต์ทิ้งไว้ เพื่อความชัดเจน
+
+3. หากต้องการระบุทางเลือก ควรใช้รูปแบบ:
+```javascript
+const MODEL_OPTIONS = {
+  CLAUDE: "anthropic/claude-3.5-sonnet",
+  DEEPSEEK: "deepseek/deepseek-r1-distill-llama-70b"
+};
+
+model: MODEL_OPTIONS.CLAUDE
+```
+
+สรุป: ควรปรับปรุงรูปแบบการเขียนให้เป็นมาตรฐาน และจัดการตัวเลือก model ให้เป็นระบบมากขึ้น
