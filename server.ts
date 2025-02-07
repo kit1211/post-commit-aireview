@@ -4,7 +4,8 @@ const app = express();
 
 app.get("/", (req, res) => {
     res.json({
-        message: "Hello World"
+        message: "Hello World",
+        lorem1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
     });
 });
 
