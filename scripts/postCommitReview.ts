@@ -40,7 +40,7 @@ const openai = new OpenAI({
 
         // ส่งโค้ดไปให้ AI วิเคราะห์
         const response = await openai.chat.completions.create({
-            model: "deepseek/deepseek-r1-distill-llama-70b",
+            model: "anthropic/claude-3.5-sonnet", // deepseek/deepseek-r1-distill-llama-70b
             messages: [
                 { role: "system", content: "คุณคือโค้ดรีวิว AI ที่ช่วยวิเคราะห์คุณภาพโค้ด กระชับ ตรงประเด็นและจะตอบเป็นภาษาไทย" },
                 { role: "user", content: `โปรดตรวจสอบและแนะนำการปรับปรุงโค้ดนี้:\n\n${changedLines}` },
